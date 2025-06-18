@@ -9,11 +9,11 @@
     <Link rel="stylesheet" href="CSS/order-style.css">
 </head>
 <body>
-    <!-- Navigation -->
+   
     <nav class="navbar navbar-light bg-white shadow-sm">
         <div class="container-fluid">
             <div class="navbar-brand">
-                <img src="IMG/Black & Yellow.png" alt="Logo" height="40" class="me-2">
+                <img src="img/delicious-burger-with-fresh-ingredients.jpg" alt="Logo" height="40" class="me-2">
                 <span>MOS BURGER</span>
             </div>
             <div class="text-center">
@@ -47,7 +47,7 @@
                         </button>
                     </div>
 
-                    <!-- Search Bar -->
+                   
                     <div class="mb-3">
                         <input type="text" class="form-control search-bar" placeholder="Search menu items..." id="searchInput">
                     </div>
@@ -55,21 +55,21 @@
                     <!-- Menu Items -->
                     <div class="menu-items-container">
                         <div class="row" id="menuItems">
-                            <!-- Menu items will be populated by JavaScript -->
+                          
                             
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Order Section -->
+            <!-- Order -->
             <div class="col-4">
                 <div class="order-section p-3">
                     <h5 class="fw-bold mb-3">Order Details</h5>
                     
-                    <!-- Order Content -->
+                   
                     <div class="order-details-container">
-                        <!-- Order ID and Date -->
+                       
                         <div class="mb-3">
                             <div class="d-flex justify-content-between">
                                 <span class="fw-semibold">Order ID:</span>
@@ -98,25 +98,39 @@
                                 <input type="email" class="form-control customer-input" placeholder="Customer Email">
                             </div>
                         </div>
+                        <table class="table table-sm mt-3" id="orderTable">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Qty</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                <th><button class="category-btn">remove</button> </th> 
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        
 
                         <hr>
 
                         <!-- Selected Items -->
                         <div id="selectedItems">
-                            <!-- Selected items will appear here -->
+                           
                         </div>
                     </div>
 
-                    <!-- Total -->
                     <div class="mt-auto">
                         <hr>
                         <div class="d-flex justify-content-between fs-5 fw-bold">
                             <span>Total:</span>
                             <span id="totalAmount">LKR 0.00</span>
                         </div>
-                        <button class="checkout-btn">
-                            <i class="fas fa-shopping-cart me-2"></i>Checkout
+                        <button class="checkout-btn" onclick="saveCustomerInfo()">
+                             <i class="fas fa-shopping-cart me-2"></i>Checkout
                         </button>
+
                     </div>
                 </div>
             </div>
